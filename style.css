@@ -1,0 +1,98 @@
+/* 基本設定 */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ★ポイント：最初は隠しておくエリア */
+#next-section,
+#department-section,
+#department-video-section,
+#survey-section {
+  display: none;
+}
+
+/* ヒーローエリア */
+.hero {
+  background: #005bac;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+/* ★ポイント：YouTube埋め込みサイズ自動調整（16:9） */
+.video-box {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9比率 */
+  height: 0;
+  background: #000;
+}
+
+.iframe-wrapper iframe,
+.iframe-wrapper div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* カードグリッド */
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #eef5ff;
+  border: 2px solid #005bac;
+  padding: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  background: #005bac;
+  color: #fff;
+}
+
+/* ボタンとリンク */
+button, .form-button {
+  display: inline-block;
+  background: #ff6b00;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover, .form-button:hover {
+  opacity: 0.8;
+}
