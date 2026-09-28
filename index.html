@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,17 +7,23 @@
   <title>Human Academy 新卒説明会</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- TOP -->
   <section class="hero">
     <h1>Human Academy<br>新卒説明会</h1>
-    <p>まずは会社説明動画をご覧ください。<br>視聴完了後、事業部選択へ進めます。</p>
+    <p>
+      まずは会社説明動画をご覧ください。<br>
+      視聴完了後、事業部選択へ進めます。
+    </p>
   </section>
+
 
   <!-- 会社説明動画 -->
   <section class="container">
     <h2 class="section-title">会社説明動画</h2>
+
     <div class="video-box">
       <div class="iframe-wrapper">
         <div id="company-video-player"></div>
@@ -24,50 +31,143 @@
     </div>
   </section>
 
+
   <!-- 視聴完了（最初は隠す） -->
   <section id="next-section" class="container">
+
     <div class="next-box">
       <h2>視聴ありがとうございました</h2>
-      <p>下記より事業部選択へお進みください</p>
-      <button onclick="showDepartments()">事業部選択へ進む</button>
+
+      <p>
+        下記より事業部選択へお進みください
+      </p>
+
+      <button onclick="showDepartments()">
+        事業部選択へ進む
+      </button>
     </div>
+
   </section>
+
 
   <!-- 事業部選択（最初は隠す） -->
   <section id="department-section" class="container">
-    <h2 class="section-title">気になる事業部を選択してください</h2>
+
+    <h2 class="section-title">
+      気になる事業部を選択してください
+    </h2>
+
     <div class="department-grid">
-      <!-- それぞれの動画IDを指定 -->
-      <div class="card" onclick="changeVideo('Yds6IsEFXWM')">学生教育</div>
-      <div class="card" onclick="changeVideo('BVPtNpGsRY4')">社会人教育</div>
-      <div class="card" onclick="changeVideo('YwpzXrXpsW8')">国際教育</div>
-      <div class="card all-card" onclick="changeVideo('ciqSbqCitK4')">全部の事業部を見る</div>
+
+      <div
+        class="card"
+        onclick="changeVideo('Yds6IsEFXWM')"
+      >
+        学生教育
+      </div>
+
+      <div
+        class="card"
+        onclick="changeVideo('BVPtNpGsRY4')"
+      >
+        社会人教育
+      </div>
+
+      <div
+        class="card"
+        onclick="changeVideo('YwpzXrXpsW8')"
+      >
+        国際教育
+      </div>
+
+      <div
+        class="card all-card"
+        onclick="changeVideo('ciqSbqCitK4')"
+      >
+        全部の事業部を見る
+      </div>
+
     </div>
+
   </section>
+
 
   <!-- 事業部動画（最初は隠す） -->
   <section id="department-video-section" class="container">
-    <h2 class="section-title">事業部紹介動画</h2>
+
+    <h2 class="section-title">
+      事業部紹介動画
+    </h2>
+
     <div class="video-box">
       <div class="iframe-wrapper">
         <div id="department-video-player"></div>
       </div>
     </div>
+
   </section>
 
-  <!-- Googleフォーム（最初は隠す） -->
+
+  <!-- アンケート（最初は隠す） -->
   <section id="survey-section" class="container">
+
     <div class="survey-box">
+
       <h2>アンケート回答</h2>
-      <p>説明会のご視聴ありがとうございました。<br>下記ボタンよりアンケート回答へお進みください。</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc204XQuBdN0Csn6dvl4i9wOn5-xq3uDF-CGYsf2718t_RUng/viewform?usp=header" target="_blank" class="form-button">
+
+      <p class="survey-message">
+        説明会のご視聴ありがとうございました。<br>
+        下記ボタンよりアンケート回答へお進みください。
+      </p>
+
+
+      <!-- お問い合わせ -->
+      <div class="contact-info">
+
+        <h3>▽ご質問はこちらへ</h3>
+
+        <p>
+          <span>メールアドレス：</span><br>
+          <a href="mailto:humanacademy_recruit@athuman.com">
+            humanacademy_recruit@athuman.com
+          </a>
+        </p>
+
+        <p>
+          <span>新卒採用公式LINE：</span><br>
+          <a
+            href="https://lin.ee/uyI5g1kH"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://lin.ee/uyI5g1kH
+          </a>
+        </p>
+
+      </div>
+
+
+      <!-- Googleフォーム -->
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc204XQuBdN0Csn6dvl4i9wOn5-xq3uDF-CGYsf2718t_RUng/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="form-button"
+      >
         アンケート回答へ進む
       </a>
-    </div> 
-  </section> 
 
-  <!-- YouTube API を先に読み込み、その後に自作JSを読み込む -->
+    </div>
+
+  </section>
+
+
+  <!-- YouTube API -->
   <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- 自作JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>
+
