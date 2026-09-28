@@ -1,4 +1,8 @@
-/* 基本設定 */
+
+/* =========================
+   基本設定
+========================= */
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -8,16 +12,25 @@ body {
   text-align: center;
 }
 
+
+/* =========================
+   共通コンテナ
+========================= */
+
 .container {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* ★ポイント：最初は隠しておくエリア */
+
+/* =========================
+   最初は隠しておくエリア
+========================= */
+
 #next-section,
 #department-section,
 #department-video-section,
@@ -25,14 +38,43 @@ body {
   display: none;
 }
 
-/* ヒーローエリア */
+
+/* =========================
+   ヒーローエリア
+========================= */
+
 .hero {
   background: #005bac;
   color: #fff;
   padding: 40px 20px;
 }
 
-/* ★ポイント：YouTube埋め込みサイズ自動調整（16:9） */
+.hero h1 {
+  margin: 0 0 15px;
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.hero p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   セクションタイトル
+========================= */
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   動画
+========================= */
+
 .video-box {
   max-width: 100%;
   margin: 0 auto;
@@ -41,7 +83,7 @@ body {
 .iframe-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9比率 */
+  padding-top: 56.25%;
   height: 0;
   background: #000;
 }
@@ -55,7 +97,11 @@ body {
   height: 100% !important;
 }
 
-/* カードグリッド */
+
+/* =========================
+   事業部カード
+========================= */
+
 .department-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -78,8 +124,13 @@ body {
   color: #fff;
 }
 
-/* ボタンとリンク */
-button, .form-button {
+
+/* =========================
+   ボタン
+========================= */
+
+button,
+.form-button {
   display: inline-block;
   background: #ff6b00;
   color: #fff;
@@ -93,6 +144,107 @@ button, .form-button {
   margin-top: 15px;
 }
 
-button:hover, .form-button:hover {
+button:hover,
+.form-button:hover {
   opacity: 0.8;
+}
+
+
+/* =========================
+   アンケート
+========================= */
+
+.survey-box {
+  padding: 10px;
+}
+
+.survey-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.survey-message {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   お問い合わせ
+========================= */
+
+.contact-info {
+  margin: 25px auto 30px;
+  padding: 20px;
+  background-color: #f5f8fc;
+  border-radius: 8px;
+  border: 1px solid #e0e8f2;
+}
+
+.contact-info h3 {
+  margin: 0 0 20px;
+  color: #005bac;
+  font-size: 20px;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.contact-info span {
+  font-weight: bold;
+}
+
+.contact-info a {
+  color: #005bac;
+  font-weight: bold;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    margin: 25px 15px;
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .contact-info {
+    padding: 15px;
+  }
+
+  .contact-info h3 {
+    font-size: 18px;
+  }
+
+  .contact-info a {
+    font-size: 14px;
+  }
+
 }
